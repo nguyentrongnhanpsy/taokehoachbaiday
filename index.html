@@ -462,6 +462,54 @@
     }
   </style>
 
+
+  <style id="cleanReadablePolishV4">
+    /* Core v4: giao diện tinh gọn, dễ đọc hơn nhưng vẫn giữ chất glassmorphism cao cấp. */
+    body { background: radial-gradient(circle at 12% 8%, rgba(59,130,246,.16), transparent 28%), radial-gradient(circle at 88% 12%, rgba(14,165,233,.10), transparent 24%), linear-gradient(135deg, #f8fafc 0%, #eef6ff 46%, #f8fafc 100%); color: #0f172a; }
+    .orb { opacity: .13 !important; filter: blur(78px) saturate(1.05) !important; transform: scale(.86); }
+    #sparkleLayer { opacity: .32; }
+    .glass-card, .glass-card-dark, .preview-toolbar { box-shadow: 0 18px 55px rgba(15,23,42,.12), inset 0 1px 0 rgba(255,255,255,.64) !important; }
+    header.glass-card-dark { padding: 1.15rem 1.25rem !important; border-radius: 1.5rem !important; background: linear-gradient(135deg, rgba(15,23,42,.96), rgba(30,58,138,.9)) !important; }
+    header.glass-card-dark .inline-flex.items-center.gap-2.rounded-full { display: none !important; }
+    header.glass-card-dark h1 { font-size: clamp(1.55rem, 2.1vw, 2.45rem) !important; line-height: 1.05 !important; }
+    header.glass-card-dark p { max-width: 62rem !important; font-size: .95rem !important; }
+    header.glass-card-dark .grid.grid-cols-3 { display: none !important; }
+    .app-grid { gap: 1.05rem !important; }
+    aside.glass-card { border-radius: 1.35rem !important; padding: 1rem !important; background: rgba(255,255,255,.82) !important; }
+    .preview-toolbar { border-radius: 1.35rem !important; padding: 1rem !important; background: rgba(255,255,255,.86) !important; }
+    .form-section { animation: none !important; }
+    .section-divider { margin: 1rem 0 !important; opacity: .62; }
+    .control-label { color: #1e3a8a !important; letter-spacing: .055em !important; }
+    .control-help { color: #64748b !important; font-size: .83rem !important; line-height: 1.45 !important; }
+    .tab-grid { grid-template-columns: 1fr !important; gap: .65rem !important; }
+    .template-tab { padding: .85rem !important; border-radius: 1.1rem !important; }
+    .template-tab .text-xs { margin-top: .25rem !important; }
+    .pill-grid { gap: .45rem !important; }
+    .tag-pill { padding: .5rem .66rem !important; border-radius: .9rem !important; font-size: .82rem !important; }
+    .domain-card { border-radius: 1rem !important; background: rgba(255,255,255,.66) !important; }
+    .domain-header { padding: .8rem !important; }
+    .domain-header p { display: none !important; }
+    .component-row { padding: .7rem .8rem !important; }
+    .import-template-card, .import-template-inner { border-radius: 1.1rem !important; }
+    .diagnostic-strip { grid-template-columns: repeat(3, minmax(0,1fr)) !important; gap: .5rem !important; }
+    .diagnostic-chip { padding: .65rem !important; border-radius: .9rem !important; }
+    .rich-toolbar button { border-radius: .72rem !important; padding: .45rem .65rem !important; }
+    .field { font-size: .94rem !important; }
+    .preview-paper { border-radius: 1.2rem !important; box-shadow: 0 22px 70px rgba(15,23,42,.14) !important; }
+    .preview-paper h1 { font-size: 1.45rem !important; margin-bottom: .5rem !important; }
+    .preview-paper h2 { margin-top: 1.15rem !important; }
+    .preview-paper table { font-size: .88rem !important; }
+    .preview-paper th { background: #eaf2ff !important; color: #0f172a !important; }
+    .metric-card { border-radius: 1rem !important; padding: .85rem !important; background: rgba(248,250,252,.82) !important; }
+    .ultimate-dock { display: none !important; }
+    .preview-extra, .ultimate-check-grid, .draft-chip, .premium-ruler { opacity: .92; }
+    .time-badge { display: inline-flex; align-items: center; justify-content: center; gap: .35rem; padding: .24rem .52rem; margin-top: .35rem; border-radius: 999px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; font-size: .78rem; font-weight: 900; white-space: nowrap; }
+    .time-note { margin: .75rem 0 0; padding: .7rem .85rem; border-radius: 1rem; background: #f8fafc; border: 1px solid #dbeafe; color: #334155; font-size: .9rem; }
+    @media (min-width: 1280px) { .app-grid { grid-template-columns: minmax(360px, 440px) 1fr !important; } }
+    @media (max-width: 900px) { header.glass-card-dark { margin-bottom: .75rem !important; } .preview-toolbar .grid { display: none !important; } }
+    @media print { .time-badge { border: none; color: #000; padding-left: 0; } .time-note { display: none; } }
+  </style>
+
 </head>
 <body>
   <div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
@@ -676,7 +724,7 @@ Sản phẩm học tập: ">Sản phẩm</button>
             <div class="metric-card"><div id="wordCount" class="metric-value">0</div><div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Từ preview</div></div>
             <div class="metric-card"><div id="requiredStatus" class="metric-value">—</div><div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Bắt buộc</div></div>
             <div class="metric-card"><div id="templateStatus" class="metric-value">2345</div><div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Mẫu</div></div>
-            <div class="metric-card"><div id="formatStatus" class="metric-value">13</div><div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Times New Roman</div></div>
+            <div class="metric-card"><div id="formatStatus" class="metric-value">35'</div><div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Thời lượng</div></div>
           </div>
         </div>
         <div id="previewPaper" class="preview-paper compact-scroll"></div>
@@ -1150,6 +1198,7 @@ Sản phẩm học tập: ">Sản phẩm</button>
         "title": "YÊU CẦU CẦN ĐẠT",
         "kind": "goals",
         "subsections": [
+          "Kiến thức",
           "Năng lực đặc thù",
           "Năng lực chung",
           "Phẩm chất",
@@ -2043,6 +2092,46 @@ Sản phẩm học tập: ">Sản phẩm</button>
       };
     }
 
+    function resolveGradeNumberForTime() {
+      const raw = String(state.gradeLevel || '').trim();
+      const match = raw.match(/\d+/);
+      return match ? Number(match[0]) : null;
+    }
+
+    function getLessonTimeProfile(templateId = getTemplate().id) {
+      const grade = resolveGradeNumberForTime();
+      const isPrimary = templateId === 'cv2345' || (grade !== null && grade >= 1 && grade <= 5);
+      const isSecondary = templateId === 'cv5512' || (grade !== null && grade >= 6 && grade <= 12);
+      if (isPrimary && !isSecondary) return { stage: 'Tiểu học', total: 35, standard: '1 tiết tiểu học 35 phút' };
+      if (isSecondary) return { stage: 'Trung học', total: 45, standard: '1 tiết trung học 45 phút' };
+      return { stage: 'Theo mẫu', total: 35, standard: 'mặc định 35 phút; nhập lớp 6-12 hoặc chọn 5512 để tự chuyển 45 phút' };
+    }
+
+    function allocateActivityMinutes(rowCount, templateId = getTemplate().id) {
+      const profile = getLessonTimeProfile(templateId);
+      const primaryPatterns = {
+        4: [5, 12, 10, 8],
+        5: [4, 11, 9, 7, 4]
+      };
+      const secondaryPatterns = {
+        4: [5, 18, 12, 10],
+        5: [5, 17, 10, 8, 5]
+      };
+      const patterns = profile.total === 45 ? secondaryPatterns : primaryPatterns;
+      if (patterns[rowCount]) return patterns[rowCount].slice();
+      const base = Math.floor(profile.total / rowCount);
+      const result = Array.from({ length: rowCount }, () => base);
+      let remain = profile.total - base * rowCount;
+      let index = Math.min(1, rowCount - 1);
+      while (remain > 0) { result[index % rowCount] += 1; index += 1; remain -= 1; }
+      return result;
+    }
+
+    function formatActivityTime(minutes) {
+      const value = Number(minutes || 0);
+      return `${value} phút`;
+    }
+
     function buildActivityRows() {
       const tpl = getTemplate();
       const subject = getSubject();
@@ -2057,7 +2146,8 @@ Sản phẩm học tập: ">Sản phẩm</button>
       if (tpl.id === 'import') {
         commonRows.push({ name: 'Đánh giá và tự đánh giá', goal: 'Tổng hợp minh chứng học tập và xác định hướng cải thiện.', content: 'Học sinh đối chiếu sản phẩm với tiêu chí, tự đánh giá và đề xuất điều chỉnh.', product: 'Phiếu tự đánh giá, nhận xét đồng đẳng, kế hoạch cải thiện.', implementation: 'Giáo viên tổ chức phản hồi nhanh, công bố tiêu chí, tổng kết và giao nhiệm vụ sau bài học.', assessment });
       }
-      return commonRows;
+      const minutes = allocateActivityMinutes(commonRows.length, tpl.id);
+      return commonRows.map((row, index) => ({ ...row, minutes: minutes[index], time: formatActivityTime(minutes[index]) }));
     }
 
     function renderList(items) {
@@ -2071,30 +2161,33 @@ Sản phẩm học tập: ">Sản phẩm</button>
       const outcomes = buildLearningOutcomes();
       const rows = buildActivityRows();
       const digitalGrouped = getDigitalByDomain();
+      const timeProfile = getLessonTimeProfile(tpl.id);
       const timeMeta = [
         `Môn học/Hoạt động giáo dục: ${subject.name}`,
         state.gradeLevel ? `Lớp: ${state.gradeLevel}` : 'Lớp: ...',
         `Số tiết: ${state.periodCount || 1}`,
-        state.timePlan ? `Thời gian thực hiện: ${state.timePlan}` : 'Thời gian thực hiện: ...'
+        state.timePlan ? `Thời gian thực hiện: ${state.timePlan}` : 'Thời gian thực hiện: ...',
+        `${timeProfile.stage}: ${timeProfile.total} phút/tiết`
       ];
       const title = state.lessonTitle || 'Tên bài học/chủ đề chưa nhập';
       const goalSection = tpl.id === 'cv2345' ? `
         <h2>I. YÊU CẦU CẦN ĐẠT</h2>
-        <h3>1. Năng lực đặc thù</h3>${renderList(outcomes.specific)}
-        <h3>2. Năng lực chung</h3>${renderList(outcomes.common)}
-        <h3>3. Phẩm chất</h3>${renderList(outcomes.qualities)}
-        <h3>4. Năng lực số tích hợp</h3>${renderList(outcomes.digital)}` : `
+        <h3>1. Kiến thức</h3>${renderList(outcomes.knowledge)}
+        <h3>2. Năng lực đặc thù</h3>${renderList(outcomes.specific)}
+        <h3>3. Năng lực chung</h3>${renderList(outcomes.common)}
+        <h3>4. Phẩm chất</h3>${renderList(outcomes.qualities)}
+        <h3>5. Năng lực số tích hợp</h3>${renderList(outcomes.digital)}` : `
         <h2>I. MỤC TIÊU</h2>
         <h3>1. Về kiến thức</h3>${renderList(outcomes.knowledge)}
         <h3>2. Về năng lực</h3>${renderList([...outcomes.common, ...outcomes.specific])}
         <h3>3. Về phẩm chất</h3>${renderList(outcomes.qualities)}
         <h3>4. Về năng lực số tích hợp</h3>${renderList(outcomes.digital)}`;
       const tableHeader = tpl.id === 'cv5512' ? `
-        <tr><th style="width:20%">Hoạt động</th><th style="width:18%">Mục tiêu</th><th>Nội dung</th><th style="width:18%">Sản phẩm</th><th>Tổ chức thực hiện</th></tr>` : `
-        <tr><th style="width:22%">Hoạt động</th><th>Cách tiến hành</th><th style="width:22%">Sản phẩm / Đánh giá</th></tr>`;
+        <tr><th style="width:18%">Hoạt động</th><th style="width:10%">Thời gian</th><th style="width:17%">Mục tiêu</th><th>Nội dung</th><th style="width:17%">Sản phẩm</th><th>Tổ chức thực hiện</th></tr>` : `
+        <tr><th style="width:20%">Hoạt động</th><th style="width:10%">Thời gian</th><th> Cách tiến hành</th><th style="width:22%">Sản phẩm / Đánh giá</th></tr>`;
       const tableRows = rows.map(row => tpl.id === 'cv5512' ? `
-        <tr><td><strong>${escapeHtml(row.name)}</strong></td><td>${escapeHtml(row.goal)}</td><td>${escapeHtml(row.content)}</td><td>${escapeHtml(row.product)}</td><td>${escapeHtml(row.implementation)}</td></tr>` : `
-        <tr><td><strong>${escapeHtml(row.name)}</strong></td><td><strong>Mục tiêu:</strong> ${escapeHtml(row.goal)}<br><strong>Nội dung:</strong> ${escapeHtml(row.content)}<br><strong>Tổ chức thực hiện:</strong> ${escapeHtml(row.implementation)}</td><td>${escapeHtml(row.product)}<br><em>${escapeHtml(row.assessment)}</em></td></tr>`).join('');
+        <tr><td><strong>${escapeHtml(row.name)}</strong></td><td><span class="time-badge">${escapeHtml(row.time)}</span></td><td>${escapeHtml(row.goal)}</td><td>${escapeHtml(row.content)}</td><td>${escapeHtml(row.product)}</td><td>${escapeHtml(row.implementation)}</td></tr>` : `
+        <tr><td><strong>${escapeHtml(row.name)}</strong></td><td><span class="time-badge">${escapeHtml(row.time)}</span></td><td><strong>Mục tiêu:</strong> ${escapeHtml(row.goal)}<br><strong>Nội dung:</strong> ${escapeHtml(row.content)}<br><strong>Tổ chức thực hiện:</strong> ${escapeHtml(row.implementation)}</td><td>${escapeHtml(row.product)}<br><em>${escapeHtml(row.assessment)}</em></td></tr>`).join('');
       const digitalSummary = digitalGrouped.length ? `<div class="mt-4 p-3 rounded-xl bg-blue-50 border border-blue-100"><strong>Ma trận năng lực số đã chọn:</strong>${digitalGrouped.map(domain => `<p><strong>${escapeHtml(domain.domainId)}. ${escapeHtml(domain.domain)}:</strong> ${domain.selectedComponents.map(c => escapeHtml(c.code + ' ' + c.title)).join('; ')}</p>`).join('')}</div>` : '';
       const previewHtml = `
         <h1>${escapeHtml(tpl.docxTitle)}</h1>
@@ -2105,6 +2198,7 @@ Sản phẩm học tập: ">Sản phẩm</button>
         <h2>II. ${tpl.id === 'cv2345' ? 'ĐỒ DÙNG DẠY HỌC' : 'THIẾT BỊ DẠY HỌC VÀ HỌC LIỆU'}</h2>
         ${renderList(textToLines(state.resources || 'Máy chiếu; phiếu học tập; bảng nhóm; học liệu số phù hợp với bài học.'))}
         <h2>III. ${tpl.id === 'cv5512' ? 'TIẾN TRÌNH DẠY HỌC' : 'CÁC HOẠT ĐỘNG DẠY HỌC CHỦ YẾU'}</h2>
+        <p class="time-note"><strong>Phân bổ thời lượng:</strong> ${escapeHtml(timeProfile.stage)} ${timeProfile.total} phút/tiết. Tổng thời lượng các hoạt động trong bảng: ${rows.reduce((sum, row) => sum + Number(row.minutes || 0), 0)} phút.</p>
         <table>${tableHeader}${tableRows}</table>
         ${digitalSummary}
         <h2>IV. ${tpl.id === 'cv5512' ? 'PHỤ LỤC / ĐIỀU CHỈNH SAU BÀI DẠY' : 'ĐIỀU CHỈNH SAU BÀI DẠY'}</h2>
@@ -2119,6 +2213,8 @@ Sản phẩm học tập: ">Sản phẩm</button>
       $('#metricCompetency').textContent = String(state.common.length + state.specific.length);
       $('#metricQuality').textContent = String(state.qualities.length);
       $('#metricDigital').textContent = String(state.digital.length);
+      const formatStatus = $('#formatStatus');
+      if (formatStatus) formatStatus.textContent = `${timeProfile.total}'`;
     }
 
     function renderAll() {
@@ -2225,10 +2321,11 @@ Sản phẩm học tập: ">Sản phẩm</button>
       if (state.teacherName) children.push(docxParagraph([docxText('Giáo viên/Tổ chuyên môn: ', { bold: true }), docxText(state.teacherName)]));
       if (tpl.id === 'cv2345') {
         children.push(docxHeading('I. YÊU CẦU CẦN ĐẠT'));
-        children.push(docxHeading('1. Năng lực đặc thù', 2)); children.push(...docxBulletList(outcomes.specific));
-        children.push(docxHeading('2. Năng lực chung', 2)); children.push(...docxBulletList(outcomes.common));
-        children.push(docxHeading('3. Phẩm chất', 2)); children.push(...docxBulletList(outcomes.qualities));
-        children.push(docxHeading('4. Năng lực số tích hợp', 2)); children.push(...docxBulletList(outcomes.digital));
+        children.push(docxHeading('1. Kiến thức', 2)); children.push(...docxBulletList(outcomes.knowledge));
+        children.push(docxHeading('2. Năng lực đặc thù', 2)); children.push(...docxBulletList(outcomes.specific));
+        children.push(docxHeading('3. Năng lực chung', 2)); children.push(...docxBulletList(outcomes.common));
+        children.push(docxHeading('4. Phẩm chất', 2)); children.push(...docxBulletList(outcomes.qualities));
+        children.push(docxHeading('5. Năng lực số tích hợp', 2)); children.push(...docxBulletList(outcomes.digital));
         children.push(docxHeading('II. ĐỒ DÙNG DẠY HỌC'));
       } else {
         children.push(docxHeading('I. MỤC TIÊU'));
@@ -2551,6 +2648,7 @@ Tổ chức thực hiện: ${row.implementation}`, `${row.product}
       const digitalDomains = getDigitalByDomain();
       const activityText = rows.map((row, index) => [
         `${index + 1}. ${row.name}`,
+        `- Thời gian: ${row.time || formatActivityTime(row.minutes || 0)}`,
         `- Mục tiêu: ${row.goal}`,
         `- Nội dung: ${row.content}`,
         `- Sản phẩm: ${row.product}`,
@@ -2567,18 +2665,19 @@ Tổ chức thực hiện: ${row.implementation}`, `${row.product}
         `Lớp: ${state.gradeLevel || '...'}`,
         `Tên bài học/chủ đề: ${state.lessonTitle || '...'}`,
         `Thời gian thực hiện: ${state.timePlan || '...'}; Số tiết: ${state.periodCount || 1}`,
+        `Định mức thời lượng: ${getLessonTimeProfile(tpl.id).stage} - ${getLessonTimeProfile(tpl.id).total} phút/tiết`,
         state.teacherName ? `Giáo viên/Tổ chuyên môn: ${state.teacherName}` : '',
         '',
         tpl.id === 'cv2345' ? 'I. YÊU CẦU CẦN ĐẠT' : 'I. MỤC TIÊU',
-        tpl.id === 'cv2345' ? '1. Năng lực đặc thù' : '1. Về kiến thức',
-        ...(tpl.id === 'cv2345' ? outcomes.specific.map(x => `- ${x}`) : (knowledgeLines.length ? knowledgeLines.map(x => `- ${x}`) : outcomes.knowledge.map(x => `- ${x}`))),
-        tpl.id === 'cv2345' ? '2. Năng lực chung' : '2. Về năng lực',
-        ...outcomes.common.map(x => `- ${x}`),
-        ...(tpl.id === 'cv5512' ? outcomes.specific.map(x => `- ${x}`) : []),
-        '3. Phẩm chất',
-        ...outcomes.qualities.map(x => `- ${x}`),
-        '4. Năng lực số tích hợp',
-        ...outcomes.digital.map(x => `- ${x}`),
+        tpl.id === 'cv2345' ? '1. Kiến thức' : '1. Về kiến thức',
+        ...(knowledgeLines.length ? knowledgeLines.map(x => `- ${x}`) : outcomes.knowledge.map(x => `- ${x}`)),
+        tpl.id === 'cv2345' ? '2. Năng lực đặc thù' : '2. Về năng lực',
+        ...(tpl.id === 'cv2345' ? outcomes.specific.map(x => `- ${x}`) : [...outcomes.common, ...outcomes.specific].map(x => `- ${x}`)),
+        tpl.id === 'cv2345' ? '3. Năng lực chung' : '3. Về phẩm chất',
+        ...(tpl.id === 'cv2345' ? outcomes.common.map(x => `- ${x}`) : outcomes.qualities.map(x => `- ${x}`)),
+        tpl.id === 'cv2345' ? '4. Phẩm chất' : '4. Về năng lực số tích hợp',
+        ...(tpl.id === 'cv2345' ? outcomes.qualities.map(x => `- ${x}`) : outcomes.digital.map(x => `- ${x}`)),
+        ...(tpl.id === 'cv2345' ? ['5. Năng lực số tích hợp', ...outcomes.digital.map(x => `- ${x}`)] : []),
         '',
         tpl.id === 'cv2345' ? 'II. ĐỒ DÙNG DẠY HỌC' : 'II. THIẾT BỊ DẠY HỌC VÀ HỌC LIỆU',
         ...(textLines(state.resources).length ? textLines(state.resources).map(x => `- ${x}`) : ['- Máy chiếu hoặc màn hình tương tác; phiếu học tập; bảng nhóm; học liệu số; thiết bị kết nối Internet nếu phù hợp.']),
@@ -2799,22 +2898,25 @@ Tổ chức thực hiện: ${row.implementation}`, `${row.product}
       const title = state.lessonTitle || 'Tên bài học/chủ đề chưa nhập';
       const outcomes = buildLearningOutcomes();
       const activities = buildActivityRows();
+      const timeProfile = getLessonTimeProfile(tpl.id);
       const children = [];
       children.push(docxHeading('KẾ HOẠCH BÀI DẠY', 0));
-      children.push(docxParagraph(`Môn học/Hoạt động giáo dục: ${subject.name}; Lớp: ${state.gradeLevel || '...'}; Số tiết: ${state.periodCount || 1}; Thời gian thực hiện: ${state.timePlan || '...'}`, { alignment: AlignmentType.CENTER, after: 80 }));
+      children.push(docxParagraph(`Môn học/Hoạt động giáo dục: ${subject.name}; Lớp: ${state.gradeLevel || '...'}; Số tiết: ${state.periodCount || 1}; Thời gian thực hiện: ${state.timePlan || '...'}; Định mức: ${timeProfile.stage} ${timeProfile.total} phút/tiết`, { alignment: AlignmentType.CENTER, after: 80 }));
       children.push(docxParagraph([docxText('Tên bài học/chủ đề: ', { bold: true }), docxText(title)], { before: 120, after: 120 }));
       if (state.teacherName) children.push(docxParagraph([docxText('Giáo viên/Tổ chuyên môn: ', { bold: true }), docxText(state.teacherName)], { after: 120 }));
       if (tpl.id === 'cv2345') {
         children.push(docxHeading('I. YÊU CẦU CẦN ĐẠT'));
-        children.push(docxHeading('1. Năng lực đặc thù', 2)); children.push(...docxBulletList(outcomes.specific));
-        children.push(docxHeading('2. Năng lực chung', 2)); children.push(...docxBulletList(outcomes.common));
-        children.push(docxHeading('3. Phẩm chất', 2)); children.push(...docxBulletList(outcomes.qualities));
-        children.push(docxHeading('4. Năng lực số tích hợp', 2)); children.push(...docxBulletList(outcomes.digital));
+        children.push(docxHeading('1. Kiến thức', 2)); children.push(...docxBulletList(textToLines(state.knowledge).length ? textToLines(state.knowledge) : outcomes.knowledge));
+        children.push(docxHeading('2. Năng lực đặc thù', 2)); children.push(...docxBulletList(outcomes.specific));
+        children.push(docxHeading('3. Năng lực chung', 2)); children.push(...docxBulletList(outcomes.common));
+        children.push(docxHeading('4. Phẩm chất', 2)); children.push(...docxBulletList(outcomes.qualities));
+        children.push(docxHeading('5. Năng lực số tích hợp', 2)); children.push(...docxBulletList(outcomes.digital));
         children.push(docxHeading('II. ĐỒ DÙNG DẠY HỌC'));
         children.push(...docxBulletList(textToLines(state.resources || 'Máy chiếu hoặc màn hình tương tác; phiếu học tập; bảng nhóm; học liệu số; thiết bị kết nối Internet nếu phù hợp.')));
         children.push(docxHeading('III. CÁC HOẠT ĐỘNG DẠY HỌC CHỦ YẾU'));
-        const rows2345 = [['Hoạt động', 'Yêu cầu cần đạt / Mục tiêu', 'Cách tiến hành', 'Sản phẩm / Đánh giá'], ...activities.map(row => [row.name, row.goal, `${row.content}\n${row.implementation}`, `${row.product}\nĐánh giá: ${row.assessment}`])];
-        children.push(docxTable(rows2345, [20, 24, 36, 20]));
+        children.push(docxParagraph([docxText('Phân bổ thời lượng: ', { bold: true }), docxText(`${timeProfile.stage} ${timeProfile.total} phút/tiết; tổng thời lượng các hoạt động: ${activities.reduce((sum, row) => sum + Number(row.minutes || 0), 0)} phút.`)], { after: 80 }));
+        const rows2345 = [['Hoạt động', 'Thời gian', 'Yêu cầu cần đạt / Mục tiêu', 'Cách tiến hành', 'Sản phẩm / Đánh giá'], ...activities.map(row => [row.name, row.time, row.goal, `${row.content}\n${row.implementation}`, `${row.product}\nĐánh giá: ${row.assessment}`])];
+        children.push(docxTable(rows2345, [18, 10, 22, 32, 18]));
         children.push(docxHeading('IV. ĐIỀU CHỈNH SAU BÀI DẠY'));
       } else {
         children.push(docxHeading('I. MỤC TIÊU'));
@@ -2825,8 +2927,9 @@ Tổ chức thực hiện: ${row.implementation}`, `${row.product}
         children.push(docxHeading('II. THIẾT BỊ DẠY HỌC VÀ HỌC LIỆU'));
         children.push(...docxBulletList(textToLines(state.resources || 'Máy chiếu hoặc màn hình tương tác; phiếu học tập; bảng nhóm; học liệu số; thiết bị kết nối Internet nếu phù hợp.')));
         children.push(docxHeading('III. TIẾN TRÌNH DẠY HỌC'));
-        const rows5512 = [['Hoạt động học', 'Mục tiêu', 'Nội dung', 'Sản phẩm', 'Tổ chức thực hiện'], ...activities.map(row => [row.name, row.goal, row.content, row.product, row.implementation])];
-        children.push(docxTable(rows5512, [18, 20, 24, 18, 20]));
+        children.push(docxParagraph([docxText('Phân bổ thời lượng: ', { bold: true }), docxText(`${timeProfile.stage} ${timeProfile.total} phút/tiết; tổng thời lượng các hoạt động: ${activities.reduce((sum, row) => sum + Number(row.minutes || 0), 0)} phút.`)], { after: 80 }));
+        const rows5512 = [['Hoạt động học', 'Thời gian', 'Mục tiêu', 'Nội dung', 'Sản phẩm', 'Tổ chức thực hiện'], ...activities.map(row => [row.name, row.time, row.goal, row.content, row.product, row.implementation])];
+        children.push(docxTable(rows5512, [16, 10, 18, 22, 16, 18]));
         children.push(docxHeading('IV. PHỤ LỤC / ĐIỀU CHỈNH SAU BÀI DẠY'));
       }
       const grouped = getDigitalByDomain();
@@ -2885,7 +2988,7 @@ Tổ chức thực hiện: ${row.implementation}`, `${row.product}
 <script type="application/json" id="deepTemplateCorpusV2">
 {
   "name": "Thư viện chi tiết dùng nội bộ cho Trợ lí tạo Kế hoạch bài dạy",
-  "version": "2025.06.import-template-structure-preserving",
+  "version": "2025.06.core-v4-time-allocation-clean-ui",
   "purpose": "Bộ dữ liệu JSON cài sẵn để file HTML hoạt động độc lập, hỗ trợ sinh câu văn, map placeholder và kiểm tra chất lượng kế hoạch bài dạy theo 2018/2345/5512/khung năng lực số.",
   "placeholderAliases": {
     "LESSON_PLAN": [
@@ -2915,7 +3018,7 @@ Tổ chức thực hiện: ${row.implementation}`, `${row.product}
   },
   "qualityGates": [
     "Mục tiêu phải thể hiện kiến thức, năng lực, phẩm chất và năng lực số nếu có tích hợp.",
-    "Hoạt động học cần có mục tiêu, nội dung, sản phẩm, tổ chức thực hiện và cách đánh giá.",
+    "Hoạt động học cần có thời gian, mục tiêu, nội dung, sản phẩm, tổ chức thực hiện và cách đánh giá.",
     "Bản Word sinh trực tiếp theo 2345/5512 dùng Times New Roman 13, giãn dòng 1.5, lề trái 3cm, các lề còn lại khoảng 2cm.",
     "Chế độ Import ưu tiên dùng placeholder để giữ nguyên bố cục file mẫu, bao gồm header, footer, bảng, styles và section."
   ],
@@ -14902,6 +15005,357 @@ Tổ chức thực hiện: ${row.implementation}`, `${row.product}
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bootUltimatePolish);
   else bootUltimatePolish();
+})();
+</script>
+
+
+<script id="lesson-plan-core-v3-knowledge-first">
+  window.LESSON_PLAN_CORE_VERSION = '2025.06.core-v3-knowledge-first';
+  window.LESSON_PLAN_CORE_NOTES = {
+    cv2345GoalOrder: ['Kiến thức', 'Năng lực đặc thù', 'Năng lực chung', 'Phẩm chất', 'Năng lực số tích hợp'],
+    cv5512GoalOrder: ['Về kiến thức', 'Về năng lực', 'Về phẩm chất', 'Về năng lực số tích hợp'],
+    docxStandard: 'Times New Roman 13, giãn dòng 1.5, mục Kiến thức luôn đứng trước phần Năng lực trong file Word xuất ra.'
+  };
+</script>
+
+
+<style id="overview-preview-polish-v5">
+  .preview-overview-button {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    min-height: 3rem;
+    border: 1px solid rgba(37,99,235,.26) !important;
+    background: linear-gradient(135deg, rgba(255,255,255,.94), rgba(239,246,255,.88)) !important;
+    color: #1e3a8a !important;
+    box-shadow: 0 14px 36px rgba(37,99,235,.12), inset 0 1px 0 rgba(255,255,255,.92) !important;
+  }
+  .preview-overview-button::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border-radius: 1rem;
+    background: radial-gradient(circle at 22% 14%, rgba(96,165,250,.22), transparent 34%), radial-gradient(circle at 86% 92%, rgba(30,64,175,.16), transparent 38%);
+    opacity: .75;
+    z-index: -1;
+    transition: opacity .24s ease, transform .24s ease;
+  }
+  .preview-overview-button:hover {
+    transform: translateY(-2px);
+    border-color: rgba(37,99,235,.46) !important;
+    box-shadow: 0 20px 46px rgba(37,99,235,.18), inset 0 1px 0 rgba(255,255,255,.96) !important;
+  }
+  .preview-overview-button:hover::before { opacity: 1; transform: scale(1.015); }
+  .preview-overview-button .icon-svg { width: 1.05rem; height: 1.05rem; }
+  .preview-overview-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99990;
+    display: none;
+    place-items: center;
+    padding: 1rem;
+    color: #0f172a;
+  }
+  .preview-overview-modal.open { display: grid; animation: overviewFadeIn .18s ease both; }
+  .preview-overview-backdrop {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 18% 8%, rgba(96,165,250,.22), transparent 30%),
+      radial-gradient(circle at 92% 12%, rgba(30,64,175,.18), transparent 34%),
+      linear-gradient(135deg, rgba(2,6,23,.72), rgba(15,23,42,.62));
+    -webkit-backdrop-filter: blur(22px) saturate(1.28);
+    backdrop-filter: blur(22px) saturate(1.28);
+  }
+  .preview-overview-shell {
+    position: relative;
+    width: min(1160px, calc(100vw - 2rem));
+    height: min(92vh, calc(100vh - 2rem));
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 2rem;
+    border: 1px solid rgba(255,255,255,.56);
+    background: linear-gradient(145deg, rgba(248,250,252,.97), rgba(255,255,255,.93));
+    box-shadow: 0 44px 130px rgba(2,6,23,.44), inset 0 1px 0 rgba(255,255,255,.9);
+  }
+  .preview-overview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.1rem 1rem 1.25rem;
+    border-bottom: 1px solid rgba(148,163,184,.22);
+    background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(239,246,255,.86));
+  }
+  .preview-overview-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    margin-bottom: .25rem;
+    color: #1d4ed8;
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+  }
+  .preview-overview-title {
+    margin: 0;
+    color: #0f172a;
+    font-size: clamp(1.05rem, 1.7vw, 1.45rem);
+    font-weight: 950;
+    line-height: 1.16;
+  }
+  .preview-overview-subtitle {
+    margin-top: .22rem;
+    color: #64748b;
+    font-size: .86rem;
+    font-weight: 700;
+  }
+  .preview-overview-actions {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .preview-overview-action {
+    min-height: 2.55rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(148,163,184,.26);
+    background: rgba(255,255,255,.78);
+    color: #334155;
+    padding: .62rem .88rem;
+    font-size: .82rem;
+    font-weight: 900;
+    box-shadow: 0 12px 30px rgba(15,23,42,.08), inset 0 1px 0 rgba(255,255,255,.86);
+    transition: transform .2s ease, border-color .2s ease, color .2s ease, background .2s ease, box-shadow .2s ease;
+  }
+  .preview-overview-action:hover {
+    transform: translateY(-1px);
+    color: #1d4ed8;
+    border-color: rgba(37,99,235,.32);
+    background: rgba(239,246,255,.9);
+    box-shadow: 0 16px 34px rgba(37,99,235,.12), inset 0 1px 0 rgba(255,255,255,.9);
+  }
+  .preview-overview-close {
+    width: 2.55rem;
+    padding: 0;
+    border-radius: 999px;
+    color: #0f172a;
+  }
+  .preview-overview-body {
+    flex: 1;
+    overflow: auto;
+    padding: clamp(1rem, 2vw, 1.6rem);
+    background:
+      linear-gradient(90deg, rgba(226,232,240,.28) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(226,232,240,.22) 1px, transparent 1px),
+      radial-gradient(circle at 50% 0%, rgba(219,234,254,.5), transparent 30%),
+      #f8fafc;
+    background-size: 28px 28px, 28px 28px, auto, auto;
+  }
+  .preview-overview-document {
+    width: min(910px, 100%);
+    margin: 0 auto;
+    min-height: 100%;
+    border-radius: 1.25rem;
+    background: #fff;
+    padding: clamp(1.15rem, 3vw, 2.35rem);
+    box-shadow: 0 24px 70px rgba(15,23,42,.16), 0 0 0 1px rgba(226,232,240,.76);
+  }
+  .preview-overview-document h1 { text-align: center; text-transform: uppercase; font-weight: 900; letter-spacing: .02em; color: #0f172a; }
+  .preview-overview-document h2 { color: #172554; border-bottom: 1px solid rgba(37,99,235,.16); padding-bottom: .28rem; }
+  .preview-overview-document table { width: 100%; border-collapse: collapse; margin: .85rem 0; }
+  .preview-overview-document th, .preview-overview-document td { border: 1px solid #cbd5e1; padding: .48rem .55rem; vertical-align: top; }
+  .preview-overview-document th { background: #eff6ff; color: #0f172a; text-align: center; font-weight: 900; }
+  .preview-overview-empty {
+    display: grid;
+    place-items: center;
+    min-height: 50vh;
+    text-align: center;
+    color: #64748b;
+    font-weight: 800;
+  }
+  body.preview-overview-open { overflow: hidden; }
+  body.preview-overview-open #ultimateDock { opacity: .15; pointer-events: none; }
+  @keyframes overviewFadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @media (max-width: 860px) {
+    .preview-overview-header { align-items: flex-start; flex-direction: column; }
+    .preview-overview-actions { width: 100%; justify-content: stretch; }
+    .preview-overview-action { flex: 1 1 auto; }
+    .preview-overview-shell { border-radius: 1.25rem; height: min(94vh, calc(100vh - 1rem)); width: calc(100vw - 1rem); }
+    .preview-overview-body { padding: .75rem; }
+  }
+  @media print {
+    body.preview-overview-open > *:not(.preview-overview-modal) { display: none !important; }
+    .preview-overview-modal.open { position: static; display: block; padding: 0; }
+    .preview-overview-backdrop, .preview-overview-header { display: none !important; }
+    .preview-overview-shell { width: auto; height: auto; box-shadow: none; border: 0; border-radius: 0; }
+    .preview-overview-body { overflow: visible; padding: 0; background: #fff; }
+    .preview-overview-document { width: auto; min-height: 0; box-shadow: none; border-radius: 0; padding: 0; }
+  }
+</style>
+
+<script id="lesson-plan-core-v5-overview-preview">
+(function(){
+  'use strict';
+  const EYE_ICON = '<svg viewBox="0 0 24 24" class="icon-svg" aria-hidden="true"><path d="M2.5 12s3.6-6.2 9.5-6.2S21.5 12 21.5 12 17.9 18.2 12 18.2 2.5 12 2.5 12Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><circle cx="12" cy="12" r="3.15" fill="none" stroke="currentColor" stroke-width="1.9"/></svg>';
+  const COPY_ICON = '<svg viewBox="0 0 24 24" class="icon-svg" aria-hidden="true"><path d="M8 8h11v13H8z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 16H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v1" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+  const PRINT_ICON = '<svg viewBox="0 0 24 24" class="icon-svg" aria-hidden="true"><path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-4a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v4a2 2 0 0 1-2 2h-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 14h10v7H7z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+  const CLOSE_ICON = '<svg viewBox="0 0 24 24" class="icon-svg" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>';
+
+  function q(selector, root){ return (root || document).querySelector(selector); }
+  function showLocalToast(title, body){
+    if (typeof window.showToast === 'function') { window.showToast(title, body); return; }
+    const toastTitle = q('#toastTitle');
+    const toastBody = q('#toastBody');
+    const toast = q('#toast');
+    if (toastTitle) toastTitle.textContent = title;
+    if (toastBody) toastBody.textContent = body || '';
+    if (toast) { toast.classList.add('show'); setTimeout(function(){ toast.classList.remove('show'); }, 2600); }
+  }
+  function ensureOverviewButton(){
+    if (q('#overviewPreviewBtn')) return q('#overviewPreviewBtn');
+    const downloadBtn = q('#downloadBtn');
+    const printBtn = q('#printBtn');
+    if (!downloadBtn) return null;
+    const group = (printBtn && printBtn.parentElement) || downloadBtn.parentElement;
+    if (!group) return null;
+    const button = document.createElement('button');
+    button.id = 'overviewPreviewBtn';
+    button.type = 'button';
+    button.className = 'preview-overview-button shine rounded-2xl px-5 py-3 font-black transition';
+    button.setAttribute('aria-haspopup', 'dialog');
+    button.setAttribute('aria-controls', 'previewOverviewModal');
+    button.innerHTML = EYE_ICON + '<span>XEM TỔNG THỂ</span>';
+    group.insertBefore(button, printBtn || downloadBtn);
+    button.addEventListener('click', openOverviewPreview);
+    return button;
+  }
+  function ensureOverviewModal(){
+    if (q('#previewOverviewModal')) return q('#previewOverviewModal');
+    const modal = document.createElement('div');
+    modal.id = 'previewOverviewModal';
+    modal.className = 'preview-overview-modal no-print';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-labelledby', 'previewOverviewTitle');
+    modal.innerHTML = '<div class="preview-overview-backdrop" data-overview-close="true"></div><section class="preview-overview-shell" role="document"><header class="preview-overview-header"><div><div class="preview-overview-kicker">'+EYE_ICON+' Chế độ xem không rối mắt</div><h2 id="previewOverviewTitle" class="preview-overview-title">Xem tổng thể kế hoạch bài dạy</h2><div class="preview-overview-subtitle">Chỉ hiển thị tài liệu hoàn chỉnh, tách khỏi khung nhập liệu để rà soát bố cục, mục tiêu, tiến trình và thời lượng.</div></div><div class="preview-overview-actions"><button type="button" class="preview-overview-action" id="overviewCopyBtn">'+COPY_ICON+' Sao chép</button><button type="button" class="preview-overview-action" id="overviewPrintBtn">'+PRINT_ICON+' In/PDF</button><button type="button" class="preview-overview-action preview-overview-close" id="overviewCloseBtn" aria-label="Đóng xem tổng thể">'+CLOSE_ICON+'</button></div></header><div class="preview-overview-body"><article id="previewOverviewContent" class="preview-overview-document"></article></div></section>';
+    document.body.appendChild(modal);
+    modal.addEventListener('click', function(event){ if (event.target && event.target.getAttribute('data-overview-close') === 'true') closeOverviewPreview(); });
+    q('#overviewCloseBtn', modal).addEventListener('click', closeOverviewPreview);
+    q('#overviewCopyBtn', modal).addEventListener('click', copyOverviewText);
+    q('#overviewPrintBtn', modal).addEventListener('click', function(){ window.print(); });
+    return modal;
+  }
+  function syncOverviewContent(){
+    const preview = q('#previewPaper');
+    const modal = ensureOverviewModal();
+    const target = q('#previewOverviewContent', modal);
+    if (!target) return;
+    const html = preview ? preview.innerHTML.trim() : '';
+    if (html) {
+      target.innerHTML = html;
+      target.classList.remove('preview-overview-empty');
+      target.classList.add('preview-overview-document');
+    } else {
+      target.innerHTML = '<div><div style="font-size:2.6rem;margin-bottom:.6rem">📄</div><div>Chưa có nội dung xem trước. Hãy nhập tên bài, lớp và nội dung kiến thức chính.</div></div>';
+      target.classList.add('preview-overview-empty');
+      target.classList.remove('preview-overview-document');
+    }
+  }
+  function openOverviewPreview(){
+    const modal = ensureOverviewModal();
+    syncOverviewContent();
+    modal.classList.add('open');
+    modal.classList.remove('no-print');
+    document.body.classList.add('preview-overview-open');
+    const closeBtn = q('#overviewCloseBtn', modal);
+    if (closeBtn) setTimeout(function(){ closeBtn.focus({ preventScroll: true }); }, 30);
+  }
+  function closeOverviewPreview(){
+    const modal = q('#previewOverviewModal');
+    if (!modal) return;
+    modal.classList.remove('open');
+    modal.classList.add('no-print');
+    document.body.classList.remove('preview-overview-open');
+    const opener = q('#overviewPreviewBtn');
+    if (opener) opener.focus({ preventScroll: true });
+  }
+  function copyOverviewText(){
+    const modal = ensureOverviewModal();
+    const text = (q('#previewOverviewContent', modal)?.innerText || '').trim();
+    if (!text) { showLocalToast('Chưa có nội dung', 'Bản xem tổng thể chưa có nội dung để sao chép.'); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ showLocalToast('Đã sao chép', 'Nội dung kế hoạch bài dạy đã được sao chép từ chế độ xem tổng thể.'); }).catch(fallbackCopy);
+    } else fallbackCopy();
+    function fallbackCopy(){
+      const area = document.createElement('textarea');
+      area.value = text;
+      area.setAttribute('readonly', 'readonly');
+      area.style.position = 'fixed';
+      area.style.opacity = '0';
+      document.body.appendChild(area);
+      area.select();
+      try { document.execCommand('copy'); showLocalToast('Đã sao chép', 'Nội dung kế hoạch bài dạy đã được sao chép.'); }
+      catch (error) { showLocalToast('Không thể sao chép tự động', 'Bạn có thể bôi đen nội dung trong cửa sổ xem tổng thể để sao chép thủ công.'); }
+      area.remove();
+    }
+  }
+  function enhanceDockPreviewAction(){
+    const dock = q('#ultimateDock');
+    if (!dock || dock.__overviewEnhanced) return;
+    dock.__overviewEnhanced = true;
+    dock.addEventListener('click', function(event){
+      const btn = event.target.closest && event.target.closest('button[data-act="preview"]');
+      if (!btn) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      openOverviewPreview();
+    }, true);
+  }
+  function observePreviewChanges(){
+    const preview = q('#previewPaper');
+    if (!preview || preview.__overviewObserved) return;
+    preview.__overviewObserved = true;
+    const observer = new MutationObserver(function(){
+      const modal = q('#previewOverviewModal');
+      if (modal && modal.classList.contains('open')) syncOverviewContent();
+    });
+    observer.observe(preview, { childList: true, subtree: true, characterData: true });
+  }
+  function installOverviewPreview(){
+    ensureOverviewButton();
+    ensureOverviewModal();
+    observePreviewChanges();
+    enhanceDockPreviewAction();
+    document.addEventListener('keydown', function(event){
+      const modal = q('#previewOverviewModal');
+      if (event.key === 'Escape' && modal && modal.classList.contains('open')) closeOverviewPreview();
+      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key.toLowerCase() === 'p') {
+        event.preventDefault();
+        openOverviewPreview();
+      }
+    });
+    setTimeout(function(){ ensureOverviewButton(); enhanceDockPreviewAction(); observePreviewChanges(); }, 500);
+    setTimeout(function(){ ensureOverviewButton(); enhanceDockPreviewAction(); observePreviewChanges(); }, 1400);
+  }
+  window.openLessonPlanOverviewPreview = openOverviewPreview;
+  window.LESSON_PLAN_CORE_VERSION = '2025.06.core-v5-overview-preview';
+  window.LESSON_PLAN_CORE_NOTES = Object.assign({}, window.LESSON_PLAN_CORE_NOTES || {}, {
+    overviewPreview: 'Bổ sung nút XEM TỔNG THỂ ở panel bên phải, mở cửa sổ đọc toàn màn hình để rà soát kế hoạch bài dạy không rối mắt.',
+    keyboardShortcut: 'Ctrl/Cmd + Shift + P mở chế độ xem tổng thể.'
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', installOverviewPreview);
+  else installOverviewPreview();
 })();
 </script>
 
